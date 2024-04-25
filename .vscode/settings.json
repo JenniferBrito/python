@@ -1,0 +1,5 @@
+{
+    "python.autoComplete.extraPaths": [
+        "./Módulo 3/Exercícos/utilidadesCev"
+    ]
+}
