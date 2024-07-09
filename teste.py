@@ -1,3 +1,6 @@
-import matplotlib.pyplot as plt
-plt.plot([1,2,3], [4,5,6], marker='o', markersize=10, markeredgecolor='red', markerfacecolor='blue')
-plt.show()
+animais = ['gato', 'coelho', 'macaco', 'girafa']
+
+animais.remove('gato')
+print(animais)
+print(len(animais))
+print(animais.index('coelho'))
