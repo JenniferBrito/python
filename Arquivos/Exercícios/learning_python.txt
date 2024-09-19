@@ -1,0 +1,3 @@
+Em python podemos analisar dados.
+Em python podemos criar dicionários.
+Em python podemos ler e escrever dados em um arquivo.
