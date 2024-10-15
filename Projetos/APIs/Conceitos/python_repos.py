@@ -20,11 +20,17 @@ print('Total de repositórios: ', response_dict['total_count'])
 # Explora informações sobre os repositórios
 repo_dicts = response_dict['items']
 
-names, stars = [], []
+names, plot_dicts = [], []
 
 for repo_dict in repo_dicts:
     names.append(repo_dict['name'])
-    stars.append(repo_dict['stargazers_count'])
+
+    plot_dict = {
+        'value': repo_dict['stargazers_count'],
+        'label': repo_dict['description'],
+        'xlink': repo_dict['html_url']
+    }
+    plot_dicts.append(plot_dict)
 
 # Cria a visualização
 
@@ -45,5 +51,5 @@ chart.force_uri_protocol = 'http'
 chart.title = 'Projetos no GitHub com mais estrelas'
 chart.x_labels = names
 
-chart.add('', stars)
+chart.add('', plot_dicts)
 chart.render_to_file('python_repos.svg')
